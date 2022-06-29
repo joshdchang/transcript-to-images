@@ -8,4 +8,4 @@ To try it out:
 - Run `npm install`
 - Run `npm run start`
 
-When it's done, the program will output a machine-readable JSON file and open a little web preview that I quickly hacked together.
+When it's done, the program will output a machine-readable JSON file and open a little web preview that I hacked together.
