@@ -1,6 +1,6 @@
 # Transcript To Images
 
-This program takes a AWS Transcribe JSON file as input, splits it into chunks, and generates images using Craiyon for each chunk.
+This program takes a AWS Transcribe JSON file as input, splits it into chunks, and generates images using [Craiyon](https://www.craiyon.com/) for each chunk.
 
 To try it out:
 - Add your transcription to the `transcriptions` folder or use the example one (`jfk.json`)
