@@ -8,7 +8,7 @@ To try it out:
 - Run `npm install`
 - Run `npm run start`
 
-It should take somewhere around 3-4 minutes to run, so be patient – the image generation uses an external service that takes a while to respond, but this does not use local resources.
+It should take somewhere around 3-4 minutes to run, so be patient – Craiyon takes a while to respond, but this does not use local resources.
 
 When it's done, the program will output a machine-readable JSON file and open a little web preview that I hacked together.
 
