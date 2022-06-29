@@ -1,7 +1,7 @@
 
-let inputPath = './transcriptions/jfk.json' // path to transcript json file - this can be any AWS Transcribe output!
+const inputPath = './transcriptions/jfk.json' // path to transcript json file - this can be any AWS Transcribe output!
 
-let outputPath = './outputs/jfk.json' // where the machine readable output will go
+const outputPath = './outputs/jfk.json' // where the machine readable output will go
 
 // imports
 import fs from 'fs'
