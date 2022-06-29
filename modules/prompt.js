@@ -1,13 +1,11 @@
 
-// CURRENTLY NOT IN USE
-
 // this module takes a chunked transcript and make it into clean(er) prompts for a text-to-image model
 
 console.log('Cleaning...')
 
 import nlp from 'compromise/two'
 
-const trimList = ['Conjunction', 'Preposition']
+const trimList = ['Conjunction', 'Preposition', 'Pronoun', 'Auxiliary', 'Copula', 'Determiner', 'Modal']
 
 export default function prompt(chunks) {
 
@@ -17,6 +15,7 @@ export default function prompt(chunks) {
     const doc = nlp(chunkString) // parse chunk string into nlp object
 
     // get array of words and their POS tags
+    doc.debug()
     const words = doc.out('json')[0].terms
 
     // trim words that take away from the meaning
