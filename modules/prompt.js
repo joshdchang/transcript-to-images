@@ -1,5 +1,5 @@
 
-// PROBABLY NOT NECESSARY, AT LEAST FOR NOW
+// CURRENTLY NOT IN USE
 
 // this module takes a chunked transcript and make it into clean(er) prompts for a text-to-image model
 
@@ -7,7 +7,7 @@ console.log('Cleaning...')
 
 import nlp from 'compromise/two'
 
-const trimList = ['Adjective', 'Noun', 'Verb']
+const trimList = ['Conjunction', 'Preposition']
 
 export default function prompt(chunks) {
 
@@ -22,18 +22,22 @@ export default function prompt(chunks) {
     // trim words that take away from the meaning
     let firstTrim = null
     let lastTrim = null
-    for(let i in words) {
-      let trimTagFound = trimList.some(r => words[i].tags.includes(r))
-      if (trimTagFound && firstTrim === null) {
+    for(let i = 0; i < words.length; i++) {
+      const word = words[i]
+      let trimTagFound = trimList.some(r => word.tags.includes(r))
+      if (!trimTagFound && firstTrim === null) {
         firstTrim = i
       }
-      if (trimTagFound) {
+      if (!trimTagFound) {
         lastTrim = i
       }
     }
     let prompt = ''
-    for(let i = firstTrim; i <= lastTrim; i++) {
-      prompt += words[i].text + ' '
+    if(firstTrim !== null && lastTrim !== null) {
+      for(let i = firstTrim; i <= lastTrim; i++) {
+        let word = words[i]
+        prompt += word.text + ' '
+      }
     }
     prompt = prompt.trim()
     if (!prompt) {

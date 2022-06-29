@@ -6,8 +6,9 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// request the backend of the Craiyon website to create images for the given prompt
+// request the Craiyon API to create images for the given prompt
 async function getImagesForSinglePrompt(prompt) {
+
   try {
     const res = await fetch("https://backend.craiyon.com/generate", {
       "credentials": "omit",
@@ -28,6 +29,7 @@ async function getImagesForSinglePrompt(prompt) {
     const images = (await res.json()).images
     console.log('Success:', prompt)
     return images
+
   } catch (e) {
     console.log(e)
     console.log('Trying again:', prompt)

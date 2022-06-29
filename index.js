@@ -1,12 +1,13 @@
 
-const inputPath = './transcriptions/jfk.json' // path to transcript json file - this can be any AWS Transcribe output!
+const inputPath = './transcriptions/crazy.json' // path to transcript json file - this can be any AWS Transcribe output!
 
-const outputPath = './outputs/jfk.json' // where the machine readable output will go
+const outputPath = './outputs/crazy.json' // where the machine readable output will go
 
 // imports
 import fs from 'fs'
 import open from 'open'
 import chunk from './modules/chunk.js'
+import prompt from './modules/prompt.js'
 import getImages from './modules/images.js'
 import webPreview from './modules/webPreview.js'
 
@@ -15,9 +16,12 @@ console.time('Runtime')
 
 const transcription = JSON.parse(fs.readFileSync(inputPath, 'utf8'))
 const chunks = chunk(transcription)
-const prompts = []
-for(let chunk of chunks) {
-  prompts.push(chunk.map(item => item.alternatives[0].content).join(' '))
+const prompts = prompt(chunks)
+// for(let chunk of chunks) {
+//   prompts.push(chunk.map(item => item.alternatives[0].content).join(' '))
+// }
+for(let prompt of prompts) {
+  console.log('Prompt:', prompt)
 }
 
 getImages(prompts).then(images => {
