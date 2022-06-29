@@ -21,8 +21,8 @@ export default function webPreview(chunks) {
   `
 
   for (let chunk of chunks) {
-    html += `<h2>${chunk.text}</h2><br>`
-    html += `<p>${chunk.prompt}</p><br>`
+    html += `<h2>${chunk.text}</h2>`
+    html += `<p>${chunk.prompt}</p>`
     html += `<div>`
     for (let image of chunk.images) {
       html += `<img src="data:image/png;base64,${image}" />`
