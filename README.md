@@ -11,3 +11,5 @@ To try it out:
 It should take somewhere around 3-4 minutes to run, so be patient – the image generation uses an external service that takes a while to respond, but this does not use local resources.
 
 When it's done, the program will output a machine-readable JSON file and open a little web preview that I hacked together.
+
+P.S. Craiyon produces different images every time so if you run the same transcript again you will get different results.
