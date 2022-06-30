@@ -1,5 +1,5 @@
 
-const inputPath = './transcriptions/crazy.json' // path to transcript json file - this can be any AWS Transcribe output!
+const inputPath = './transcriptions/jfk.json' // path to transcript json file - this can be any AWS Transcribe output!
 
 const outputPath = './outputs/crazy.json' // where the machine readable output will go
 

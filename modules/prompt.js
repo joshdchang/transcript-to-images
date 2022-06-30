@@ -5,7 +5,7 @@ console.log('Cleaning...')
 
 import nlp from 'compromise/two'
 
-const trimList = ['Conjunction', 'Preposition', 'Pronoun', 'Auxiliary', 'Copula', 'Determiner', 'Modal']
+const trimList = ['Conjunction', 'Preposition', 'Auxiliary', 'Copula', 'Determiner', 'Modal']
 
 export default function prompt(chunks) {
 

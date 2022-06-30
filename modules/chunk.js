@@ -8,14 +8,14 @@ const defaultConfig = {
   minSectionSize: 2,
 
   minChunkSize: 3,
-  maxChunkSize: 15,
-  softMaxChunkSize: 10,
+  maxChunkSize: 18,
+  softMaxChunkSize: 11,
 
   globalThresholdWeight: 0.15,
   globalDeviations: 0.15,
 
-  sectionThresholdWeight: 0.15,
-  sectionDeviations: 0.25,
+  sectionThresholdWeight: 0.20,
+  sectionDeviations: 0.26,
 }
 
 // utils
