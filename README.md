@@ -1,6 +1,6 @@
 # Transcript To Images
 
-## I made this as a proof-of-concept when interning at a startup. I'm unsure if it still works.
+## I made this as a proof-of-concept when interning at a startup during high school. I'm unsure if it still works.
 
 This program takes a AWS Transcribe JSON file as input, splits it into chunks, and generates images using [Craiyon](https://www.craiyon.com/).
 
